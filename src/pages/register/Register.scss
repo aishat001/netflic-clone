@@ -1,0 +1,151 @@
+.register {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.8) 0,
+      transparent 60%,
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/f669a8f4-de1e-49d7-bb56-c9bd1f4a9069/fbe6b535-b521-4096-929b-5bf1d6a7f700/NG-en-20221031-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+
+  .top {
+    width: 100%;
+    color: white;
+    position: absolute;
+
+    .wrapper {
+      width: calc(100vw - 50px);
+      height: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: auto;
+
+      img {
+        height: 20px;
+      }
+
+      .loginBtn {
+        background: var(--red);
+        font-size: 0.9rem;
+        padding: 0.2rem 1.2rem;
+        border-radius: 4px;
+
+
+        @media (min-width: 765px) {
+          padding: 0.5rem 1.5rem;
+
+        }
+      }
+    }
+  }
+  .container {
+    display: flex;
+    max-width: 950px;
+    height: 100%;
+    color: white;
+    margin: auto;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      max-width: 640px;
+      line-height: 1.1;
+      @media only screen and (min-width: 550px) and (max-width: 949px) {
+        font-size: 3.125rem;
+      }
+      @media only screen and (min-width: 950px) and (max-width: 1449px) {
+        font-size: 3.125rem;
+      }
+
+      @media only screen and (min-width: 1450px),
+        only screen and (min-width: 950px) and (max-width: 1449px) {
+        font-size: 4rem;
+      }
+    }
+    h2 {
+        font-size: 1.125rem;
+        margin: 1rem 0;
+        @media only screen and (min-width: 1450px), only screen and (min-width: 950px) and (max-width: 1449px)
+        {
+                        font-size: 1.625rem;
+          }
+
+          @media screen and (min-width: 740px)
+ {
+    font-size: 23px;
+ }
+    }
+    p {
+        padding-bottom: 20px;
+
+    }
+
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      gap: 20px;
+        
+        input {
+            background: white;
+            height: 48px;
+            padding: 10px 10px;
+            border:0;
+            color: #000;
+            border-radius: 2px;
+
+        }
+        button {
+            background: var(--red);
+            min-height: 40px;
+            font-size: 22px;
+            border-radius: 2px;
+            padding: 10px 10px;
+            align-items:center;
+            border: 0;
+           width: max-content;
+           margin: auto;
+        }
+
+        @media (min-width: 1021px) {
+          height: 60px;
+          width: 70%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row;
+          border-radius:5px;
+          background:White;
+          gap: 20px;
+
+          input {
+            flex: 9;
+            height: 100%;
+            border-radius: 0;
+
+          }
+
+          button {
+            flex: 3;
+            height: 100%;
+            border-radius: 0;
+          }
+
+      }
+
+            
+        }
+    }
+
+
+  }
+

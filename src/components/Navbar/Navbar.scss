@@ -1,0 +1,63 @@
+.navbar {
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 999;
+    background: linear-gradient(to top, transparent  0%, rgb(0,0,0,0.3) 50%);
+
+    &.isScolled {
+        background : var(--main-color);
+    }
+    .navContainer {
+        height: 70px;
+        width: calc(100vw - 100px);
+
+        .left {
+            img {
+                margin-right: 40px;
+                height: 30px;
+            }
+            span {
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .right {
+            span {
+                margin-right: 10px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+            .icon {
+                cursor: pointer;
+            }
+
+        }
+
+        .profile {
+            cursor: pointer;
+            .options {
+                position: absolute;
+                display: none;
+            }
+
+            &:hover {
+                .options {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: black;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
