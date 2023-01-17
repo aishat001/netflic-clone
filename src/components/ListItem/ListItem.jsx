@@ -3,7 +3,7 @@ import {
   PlayArrow,
   ThumbDownAltOutlined,
   ThumbUpAltOutlined,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
