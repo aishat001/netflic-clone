@@ -5,7 +5,6 @@ import {
 import "./List.scss";
 import ListItem from "../ListItem/ListItem";
 import { useRef, useState } from "react";
-// import ReactScrollx from "react-scrollx";
 
 const List = ({list}) => {
     const [isMoved, setIsMoved] = useState(false);
@@ -28,7 +27,7 @@ const List = ({list}) => {
 
   return (
     <div className="list">
-      <span className="list-title">{list.title}</span>
+      <span className="list-title ml-[10px] sm:ml-[50px]">{list.title}</span>
 
       <div className="list-wrapper">
           <ArrowBackIosOutlined
@@ -37,7 +36,7 @@ const List = ({list}) => {
             style={{ display: !isMoved && "none" }}
 
           />
-            <div className="list-container flex flex-row" ref={listRef} >
+            <div className="list-container flex flex-row ml-[10px] sm:ml-[50px]" ref={listRef} >
               {
               list.content.map((item, i) => (
                 <ListItem index={i} item={item} key={i + "tg" }/>

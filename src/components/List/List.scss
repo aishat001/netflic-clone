@@ -6,7 +6,6 @@
     color: white;
     font-size: 20px;
     font-weight: 500;
-    margin-left: 50px;
   }
   .list-wrapper {
     position: relative;
@@ -38,14 +37,15 @@
       width: max-content;
       transform: translateX(0px);
       transition: all 1s ease;
-      margin-left: 50px;
 
       &:first-child {
         margin-left: 50px;
       }
     }
   }
+
 }
+
 
 // overflow-x-scroll {
 //     overflow-x: scroll;

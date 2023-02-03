@@ -27,32 +27,84 @@
     img {
         background: linear-gradient( #000000 100%, #6A522E 0%);
         height: 100%;
-        object-fit: cover;
+        // object-fit: contain;
     }
-    .info {
-        position: absolute;
-        bottom: 100px;
-        left: 50px;
-        color:White;
-        width: min-content;
+    .block {
+        width: 100%;
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    box-shadow: inset 0px -70px 50px 2px black;
+
+    }
+    .mobileInfo {
+        z-index: 5;
 
         .title {
             font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
             font-weight: 700;
-            font-size: 100px;
+            font-size: 65px;
+            width: max-content;
+            text-align: center;
+        }
+        .button {
+   
+            color:black;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            margin-top: 10px;
+            
+            button {
+                padding: 10px;
+                background-color:white;
+                border-radius: 5px;
+                display: flex;
+                align-items:center;
+
+
+                &.infobutton {
+                    background: grey;
+                    color:white;
+                }
+            }
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+    .info {
+        position: absolute;
+        // bottom: 100px;
+        left: 50px;
+        color:White;
+        width: min-content;
+        top: 200px;
+        display: flex;
+        z-index: 5;
+        .title {
+            font-family: 'Poppins', sans-serif;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 65px;
+            letter-spacing: -2px;
+            width: max-content;
         }
 
         .desc {
             margin: 20px 0;
+            font-weight: 500;
+            // line-height: 19;
         }
 
         .button {
    
             color:black;
-            display: flex;
             flex-direction: row;
             gap: 10px;
             align-items: center;
+            margin-top: 10px;
             
             button {
                 padding: 10px;

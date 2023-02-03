@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Register.scss";
 
 const Register = () => {
@@ -24,7 +25,7 @@ const Register = () => {
             alt="netflix logo"
           />
 
-          <button className="loginBtn">Sign in</button>
+          <Link to="/login"><button className="loginBtn">Sign in</button></Link>
         </div>
       </div>
 
@@ -38,7 +39,7 @@ const Register = () => {
         {!email && (
           <form className="input">
             <input type="email" placeholder="Email address" ref={emailRef} />
-            <button onClick={handleStart}>Get started</button>
+            <Link to="/home"><button onClick={handleStart}>Get started</button></Link>
           </form>
         ) 
 }

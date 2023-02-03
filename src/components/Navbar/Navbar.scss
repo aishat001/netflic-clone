@@ -11,7 +11,7 @@
     }
     .navContainer {
         height: 70px;
-        width: calc(100vw - 100px);
+        // width: calc(100vw - 100px);
 
         .left {
             img {
@@ -19,7 +19,6 @@
                 height: 30px;
             }
             span {
-                margin-right: 20px;
                 cursor: pointer;
             }
         }

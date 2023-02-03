@@ -1,29 +1,8 @@
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Featured.scss";
 
 const Featured = ({ type }) => {
-  const [content, setContent] = useState({});
-
-  useEffect(() => {
-    const getRandomContent = async () => {
-      try {
-        const res = await axios.get(`/movies/random?type=${type}`, {
-          headers: {
-            token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmU0M2ZhYWYyYzY3YzRlNjU1Yjg3NiIsImlzQWRtaW4iOiJmYWxzZSIsImlhdCI6MTY2OTg1NTYxNiwiZXhwIjoxNjcwMjg3NjE2fQ.Rzx52RSdpzk8W7H6PcySPZ6gPCi-59uMg2BPwrfldUo",
-          },
-        });
-
-        setContent(res.data[0]);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getRandomContent();
-  }, [type]);
-  console.log(content.img);
 
   return (
     <div className="featured">
@@ -49,24 +28,45 @@ const Featured = ({ type }) => {
           </select>
         </div>
       )}
-
       <img
-        src={content.img}
+        src="images/MoviePoster.png"
         alt="bgImage"
         width="100%"
         height="100%"
+        className=" hidden sm:flex"
+      />
+      <img
+        src="images/mobilePoster.png"
+        alt="bgImage"
+        width="100%"
+        height="100%"
+        className="flex sm:hidden"
       />
 
-      <div className="info flex flex-col">
-        {/* <span className="title">{content.title}</span> */}
-        <span className="desc">
-         {content.desc}
+      <div className="info flex flex-col justify-center hidden sm:flex">
+        <span className="title hidden sm:flex">
+          <span className="absolute ml-[75px] text-lg ">The</span>
+          WALKING DEAD
         </span>
 
-        <div className="button">
+        <span className="hidden sm:flex"s>
+          Season <span className="text-red-600">10</span> | Episode{" "}
+          <span className="text-red-600">01</span> | Lines we cross
+        </span>
+
+
+        <span className="desc hidden sm:flex">
+          We pick back up with the group in Oceanside continuing to train in
+          case the Whisperers return. Tensions are high as our heroes struggle
+          to hold onto their concept of civilization.{" "}
+        </span>
+
+        <div className="button hidden sm:flex">
           <button className="play">
-            <PlayArrow />
-            <span>Play</span>
+            <Link to="/watch" state={{ movie: "videos/trailer.mp4" }}>
+              <PlayArrow />
+              <span>Play</span>
+            </Link>
           </button>
 
           <button className="infobutton">
@@ -75,6 +75,33 @@ const Featured = ({ type }) => {
           </button>
         </div>
       </div>
+
+      <div className=" mobileInfo w-[100%] absolute bottom-[320px] text-white ">
+      <div className="absolut bottom-[200px] flex flex-col justify-center !sm:hidden !m-0">
+        <span className="flex title !text-3xl sm:hidden m-auto fw-700 text-[50px]">Stranger <br/> Things</span>
+        <span className="flex sm:hidden m-auto">
+        Shows textTwo TV Shows US
+s
+        </span>
+
+        <div className="button flex sm:hidden justify-center">
+          <button className="play">
+            <Link to="/watch" state={{ movie: "videos/trailer.mp4" }}>
+              <PlayArrow />
+              <span>Play</span>
+            </Link>
+          </button>
+
+          <button className="infobutton">
+            <InfoOutlined />
+            <span>Info</span>
+          </button>
+        </div>
+      </div>
+      </div>
+
+
+      <div className="block"></div>
     </div>
   );
 };

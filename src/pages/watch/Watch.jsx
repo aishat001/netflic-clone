@@ -1,5 +1,6 @@
-import { ArrowBackOutlined } from "@mui/icons-material";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
 import "./Watch.scss";
 
 const Watch = (props) => {
@@ -9,19 +10,21 @@ const Watch = (props) => {
 
   return (
     <div className="watch">
-      <Link to="/">
+      <Navbar/>
+      {/* <Link to="/home">
         <div className="back">
           <ArrowBackOutlined /> Home
         </div>
-      </Link>
+      </Link> */}
       <video
-        src={movie.video}
+        src={movie}
         autoPlay
         controls
         // contentEditable
         onProgress
         className="video"
       />
+<Footer/>
     </div>
   );
 };

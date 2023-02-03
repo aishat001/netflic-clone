@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
@@ -32,7 +33,7 @@ const Login = () => {
             <h1>Sign in</h1>
             <input type="email" placeholder="email or phone number" ref={emailRef} />
             <input type="number" placeholder="Phone number" ref={emailRef} />
-            <button>Sign in</button>
+            <button><Link to="/home">Sign in</Link></button>
             <span>New to Netflix ? 
               <b> SignUp now</b>
             </span>

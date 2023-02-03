@@ -104,9 +104,10 @@
             border-radius: 2px;
 
         }
-        button {
+        a {
             background: var(--red);
-            min-height: 40px;
+            min-height: 50px;
+            height: inherit;
             font-size: 22px;
             border-radius: 2px;
             padding: 10px 10px;

@@ -2,4 +2,13 @@
     background-color: var(--main-color);
     overflow: hidden;
 
+
+    
+
 }
+.list:first-of-type {
+        margin-top: -200px;
+        .list-title {
+            position: relative;
+        }
+    }
