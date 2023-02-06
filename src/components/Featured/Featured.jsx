@@ -6,7 +6,7 @@ import "./Featured.scss";
 const Featured = ({ type }) => {
 
   return (
-    <div className="featured">
+    <div className="featured h-[95vh] sm:h-[931px]">
       {type && (
         <div className="category">
           <span>{type === "movies" ? " Movies" : "Series"}</span>
@@ -45,8 +45,8 @@ const Featured = ({ type }) => {
       />
 
       <div className="info flex flex-col justify-center hidden sm:flex">
-        <span className="title hidden sm:flex">
-          <span className="absolute ml-[75px] text-lg ">The</span>
+        <span className="title hidden sm:flex  text-[45px] lg:text-[60px] xl:text-[80px]">
+          <span className="absolute ml-[75px] text-lg   ">The</span>
           WALKING DEAD
         </span>
 
