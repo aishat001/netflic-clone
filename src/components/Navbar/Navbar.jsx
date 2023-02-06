@@ -25,7 +25,7 @@ const Navbar = () => {
             />
           </Link>
 
-          <Link to="/home">
+<Link to="/home">
             {" "}
             <img
               src="images/mobile-logo.png"
@@ -33,19 +33,23 @@ const Navbar = () => {
               className=" sm:hidden"
             />
           </Link>
+          <div className="flex gap-[15px]">
+
           <Link to="/home">
             <span className="hidden sm:inline-flex">Home</span>
           </Link>
           <Link to="/shows">
-            <span className="ml-[20px] sm:ml-[0px]">Tv Shows</span>
+            <span >Tv Shows</span>
           </Link>
           <Link to="/movies">
-            <span className="ml-[20px] sm:ml-[0px]">Movies</span>
+            <span >Movies</span>
           </Link>
           {/* <Link to="/watch"><span className="hidden sm:inline-flex">Watch</span></Link> */}
           <Link to="/my-lists">
-            <span className="ml-[20px] sm:ml-[0px]">My List</span>
+            <span >My List</span>
           </Link>
+</div>
+ 
         </div>
         <div className="right ml-auto  hidden items-center md:inline-flex">
           <Search className="icon" />
