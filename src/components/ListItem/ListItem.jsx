@@ -15,10 +15,10 @@ const ListItem = ({ item, index }) => {
 
     return (
       <Link to="/watch" state={{  movie : item.trailer  }}>
-      <div className="w-[119px] h-[180px] sm:w-[285px]">
+      <div className=" w-[119px] h-[180px] sm:w-[285px]">
         
       <div
-      className="listItem"
+      className="listItem hidden"
       style={{ left: isHover && index * 285 - 50 + index * 2.5 }}
       onMouseEnter={() => setisHover(true)}
       onMouseLeave={() => setisHover(false)}
@@ -31,8 +31,9 @@ const ListItem = ({ item, index }) => {
       />
 
       {isHover && (
-        <>
-          <video src={item.trailer} autoPlay={true} loop />
+        <div className='hoverr hidden'>
+          <video src={item.trailer} autoPlay={`false`} loop className='hidden sm:block autoplay-hidden'/>
+          <video src={item.trailer} autoPlay={`true`} loop className='autoplay-true hidden none' muted/>
 
           <div className="itemInfo flex flex-col p-2 ">
             <div className="icons">
@@ -54,9 +55,10 @@ const ListItem = ({ item, index }) => {
 
             <div className="genre">{item.genre}</div>
           </div>
-        </>
+        </div>
       )}
     </div>
+
     </div>
 
     <div className=" sm:hidden">
