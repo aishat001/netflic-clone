@@ -1,3 +1,4 @@
+import React from 'react';
 import { InfoOutlined, PlayArrow } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import "./Featured.scss";

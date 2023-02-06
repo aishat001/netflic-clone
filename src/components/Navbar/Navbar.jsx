@@ -2,6 +2,8 @@ import { ArrowDropDown, Notifications, Search } from "@mui/icons-material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
+import React from 'react';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);

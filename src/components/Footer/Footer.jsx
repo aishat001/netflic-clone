@@ -22,9 +22,9 @@ const Footer = () => {
 
     <div className='text-[#C4C4C4] w-[90%] flex justify-between sm:hidden p-3'>
         <Link to="/home"><span><Home/></span></Link>
-        <Link><span><Search/></span></Link>
-        <Link><span><Download/></span></Link>
-        <Link><span><Dehaze/></span></Link>
+        <Link to=""><span><Search/></span></Link>
+        <Link to=""><span><Download/></span></Link>
+        <Link to=""><span><Dehaze/></span></Link>
 
     </div>
     </div>

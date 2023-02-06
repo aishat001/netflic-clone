@@ -5,6 +5,8 @@ import Register from "./pages/register/Register";
 import Watch from "./pages/watch/Watch";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Shows from "./pages/tvShows/Shows";
+import React from 'react';
+
 
 const App = () => {
   const user = true;
