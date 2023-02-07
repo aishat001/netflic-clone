@@ -32,8 +32,8 @@ const Login = () => {
       {/* <div className="container flex  flex-col"> */}
           <form className="form " >
             <h1>Sign in</h1>
-            <input type="email" placeholder="email or phone number" ref={emailRef} />
-            <input type="password" placeholder="Phone number" ref={emailRef} />
+            <input type="email" placeholder="email" ref={emailRef} />
+            <input type="password" placeholder="password" ref={emailRef} />
             <button type='submit'><Link to="/home">Sign in</Link></button>
             <span>New to Netflix ? 
               <b> SignUp now</b>
