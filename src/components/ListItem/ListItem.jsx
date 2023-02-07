@@ -18,23 +18,25 @@ const ListItem = ({ item, index }) => {
       <div className=" w-[119px] h-[180px] sm:w-[285px]">
         
       <div
-      className="listItem hidden"
+      className="listItem"
       style={{ left: isHover && index * 285 - 50 + index * 2.5 }}
       onMouseEnter={() => setisHover(true)}
       onMouseLeave={() => setisHover(false)}
     >
-      <img
+
+        <img
         src={item.img}
         alt="bgImage"
         width="100%"
         height="100%"
       />
+    
 
       {isHover && (
-        <div className='hoverr hidden'>
-          <video src={item.trailer} autoPlay={`false`} loop className='hidden sm:block autoplay-hidden'/>
-          <video src={item.trailer} autoPlay={`true`} loop className='autoplay-true hidden none' muted/>
-
+        <div>
+         <div>
+            <video src={item.trailer} autoPlay={true} loop className='autoplay-true ' muted/>
+            </div>
           <div className="itemInfo flex flex-col p-2 ">
             <div className="icons">
               <PlayArrow className="icon" />
@@ -59,10 +61,6 @@ const ListItem = ({ item, index }) => {
       )}
     </div>
 
-    </div>
-
-    <div className=" sm:hidden">
-      
     </div>
 
      </Link>

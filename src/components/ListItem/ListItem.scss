@@ -23,7 +23,7 @@
 
     @media (min-width: 638px ) {
         video {
-            width: 100%;
+            width: 385px;
             height: 200px;
             object-fit: cover;
             position: absolute;
@@ -33,7 +33,7 @@
         }
         &:hover {
             width: 385px;
-            height: 390px;
+            height: 350px;
             position: absolute;
             top: -183px;
             z-index: 2;
@@ -88,9 +88,9 @@
         .autoPlay-hidden{
             display: block;
         }
-        .hoverr {
-            display: flex;
-        }
+        // .hoverr {
+        //     display: flex;
+        // }
     }
 
     
