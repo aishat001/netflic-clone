@@ -1,21 +1,19 @@
 import React from 'react';
-import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const emailRef = useRef();
-  const passwordRef = useRef();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+      navigate("/home")
 
-  const handleStart = () => {
-    setEmail(emailRef.current.value);
   };
-  const handleFinish = () => {
-    setPassword(passwordRef.current.value);
-  };
+
 
   return (
     <div className="login">
@@ -30,19 +28,19 @@ const Login = () => {
       </div>
 
       {/* <div className="container flex  flex-col"> */}
-          <form className="form " >
-            <h1>Sign in</h1>
-            <input type="email" placeholder="email" ref={emailRef} />
-            <input type="password" placeholder="password" ref={emailRef} />
-            <button type='submit'><Link to="/home">Sign in</Link></button>
-            <span>New to Netflix ? 
-              <b> SignUp now</b>
-            </span>
+      <form className="form " typeof='submit' onSubmit={handleSubmit}>
+        <h1>Sign in</h1>
+        <input type="email" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)}  required/>
+        <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <button type='submit'>Sign in</button>
+        <span>New to Netflix ?
+          <b> SignUp now</b>
+        </span>
 
-            <small>THis page is protected by Google recaptcha to ensure you are not aa bot  
-            <b>  Learn more</b>
-            </small>
-          </form>
+        <small>THis page is protected by Google recaptcha to ensure you are not aa bot
+          <b>  Learn more</b>
+        </small>
+      </form>
       {/* </div> */}
     </div>
   );
