@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
@@ -18,12 +18,13 @@ const Login = () => {
   return (
     <div className="login">
       <div className="top">
-        <div className="wrapper">
+        <div className="wrapper !w-[85vw] !sm:w-[100vw-100px]">
+          <Link to="/register">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt="netflix logo"
           />
-
+          </Link>
         </div>
       </div>
 
@@ -34,7 +35,7 @@ const Login = () => {
         <input type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button type='submit'>Sign in</button>
         <span>New to Netflix ?
-          <b> SignUp now</b>
+          <Link to="/register"><b> SignUp now</b> </Link>
         </span>
 
         <small>THis page is protected by Google recaptcha to ensure you are not aa bot

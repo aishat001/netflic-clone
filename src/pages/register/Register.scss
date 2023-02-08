@@ -103,8 +103,13 @@
             color: #000;
             border-radius: 2px;
 
+            &:focus-visible {
+              border:none;
+              outline: none;
+            }
+
         }
-        a {
+        button {
             background: var(--red);
             min-height: 50px;
             height: inherit;

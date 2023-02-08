@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.scss";
 
 const Register = () => {
@@ -9,12 +9,14 @@ const Register = () => {
 
   const emailRef = useRef();
   const passwordRef = useRef();
+  const navigate = useNavigate();
 
   const handleStart = () => {
     setEmail(emailRef.current.value);
   };
   const handleFinish = () => {
     setPassword(passwordRef.current.value);
+    navigate("/home")
   };
 
   return (
@@ -26,7 +28,9 @@ const Register = () => {
             alt="netflix logo"
           />
 
-          <Link to="/login"><button className="loginBtn">Sign in</button></Link>
+          <Link to="/login">
+          <button className="loginBtn">Sign in</button>
+            </Link>
         </div>
       </div>
 
@@ -38,9 +42,11 @@ const Register = () => {
         </p>
 
         {!email && (
-          <form className="input">
-            <input type="email" placeholder="Email address" ref={emailRef} />
-            <Link to="/home"><button onClick={handleStart}>Get started</button></Link>
+          <form className="input" onSubmit>
+            <input type="email" placeholder="Email address" ref={emailRef} required/>
+            {/* <Link to="/home"> */}
+              <button onClick={handleStart}>Get started</button>
+              {/* </Link> */}
           </form>
         ) 
 }
