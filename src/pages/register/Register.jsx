@@ -43,7 +43,7 @@ const Register = () => {
 
         {!email && (
           <form className="input" onSubmit>
-            <input type="email" placeholder="Email address" ref={emailRef} required/>
+            <input type="email" placeholder="Email address" value={email} ref={emailRef} required/>
             {/* <Link to="/home"> */}
               <button onClick={handleStart}>Get started</button>
               {/* </Link> */}
@@ -54,7 +54,7 @@ const Register = () => {
 {
         email && (
           <form className="input">
-            <input type="password" placeholder="password" ref={passwordRef} />
+            <input type="password" placeholder="password" value={password} ref={passwordRef} />
             <button onClick={handleFinish}>Submit</button>
           </form>
         )}
